@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Loading } from './components/Loading';
 import { usePosition } from './hooks/usePosition';
 import { useFetch } from './hooks/useFetch';
-import { Form, Searcher } from './components/searcher/Searcher'
+import { Searcher } from './components/searcher/Searcher'
 
 export const WeatherApp = () => {
     
