@@ -2,7 +2,6 @@ import Axios from 'axios';
 import { useEffect, useState } from 'react';
 
 export const useFetch = (url, options = {}) => {
-    
     const [state, setstate] = useState({
         data: null,
         loading: true,
@@ -10,9 +9,7 @@ export const useFetch = (url, options = {}) => {
     });
 
     useEffect(() => {
-       
-        if(url){
-
+        if (url) {
             Axios.get(url).then((resp) => {
                 if (resp.statusText === 'OK') {
                     setstate({
@@ -24,9 +21,8 @@ export const useFetch = (url, options = {}) => {
                     console.log('object');
                 }
             });
-            
         }
-        }, [url]);
-        
+    }, [url]);
+
     return state;
 };
