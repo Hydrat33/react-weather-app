@@ -22,7 +22,7 @@ export const WeatherApp = () => {
     if (loading) return <Loading />;
 
     return (
-        <div className='flex flex-col justify-center items-center h-screen bg-gradient-to-br from-blue-700 via-blue-400 to-grey-400 backdrop-blur'>
+        <div className='flex flex-col justify-center items-center h-screen bg-gradient-to-br from-blue-700 via-blue-400 to-grey-400'>
             <Searcher seturl={seturl} />
 
             <div className='w-10/12 mt-10 h-3/5 h-200 shadow-xl bg-white sm:w-5/12 rounded-2xl p-2 bg-opacity-20 blur-50 relative text-gray-700 bg-clip-padding'>
@@ -32,12 +32,12 @@ export const WeatherApp = () => {
                     </h2>
                 </header>
 
-                <main className='flex mt-5 text-center flex-col sm:items-center sm:flex-row sm:justify-evenly sm:w-full sm:'>
-                    <span className='text-8xl sm:text-9xl'>
+                <main className='flex mt-5 text-center flex-col md:items-center md:flex-row md:justify-evenly md:w-full sm:'>
+                    <span className='text-8xl md:text-9xl'>
                         {Math.round(main.temp)}°
                     </span>
 
-                    <div className='flex flex-col justify-center text-2xl sm:text-3xl'>
+                    <div className='flex flex-col justify-center text-2xl md:text-3xl'>
                         <p className='flex flex-row justify-center items-center'>
                             {weather[0].description}
                             <img
